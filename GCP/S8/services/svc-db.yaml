@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: db
+  namespace: vote  
+  labels:
+    app: db  
+spec:
+  ports:
+    - name: "db-service"
+      protocol: TCP
+      port: 5432
+      targetPort: 5432
+  type: ClusterIP
+  selector:
+    app: db
