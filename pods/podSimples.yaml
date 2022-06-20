@@ -1,9 +1,10 @@
 apiVersion: v1
-kind: Pod
+kind:
 metadata:
-  name: nginx-pod
+  name: nginx
   labels:
-    env: production
+    app: nginx
+    tier: frontend
 spec:  
   containers:
     - name: nginx-container
