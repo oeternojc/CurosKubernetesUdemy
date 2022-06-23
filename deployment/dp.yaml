@@ -8,7 +8,7 @@ metadata:
 spec:
   template:
     metadata:
-      name: frontend-pod 
+      name: frontend-pod
       labels:
         app: frontend-app
         type: frontend
@@ -18,8 +18,5 @@ spec:
           image: nginx
   selector:
     matchLabels:
-      app: frontend-app
- #strategy  
- # strategy:
- #   type: Recreate
-  replicas: 6
+      type: frontend
+  replicas: 3

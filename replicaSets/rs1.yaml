@@ -9,7 +9,7 @@ spec:
     metadata:
       name: nginx-pod
       labels:
-        env: production
+        env: production        
     spec:
       containers:
         - name: nginx-container
@@ -17,4 +17,4 @@ spec:
   selector:
     matchLabels:
       env: production
-  replicas: 2
+  replicas: 3
