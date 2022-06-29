@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: worker
-  name: worker
+    app: result
+  name: result
   namespace: vote
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: worker
+      app: result
   template:
     metadata:
       labels:
-        app: worker
+        app: result
     spec:
       containers:
-      - image: kodekloud/examplevotingapp_worker:v1
-        name: worker
+      - image: kodekloud/examplevotingapp_result:v1
+        name: result
         ports:
         - containerPort: 80
-          name: worker
+          name: result
